@@ -121,19 +121,19 @@ open class Game {
 		if inPenaltyBox[currentPlayer]{
 			if isGettingOutOfPenaltyBox {
 				print("Answer was correct!!!!")
-				purses[currentPlayer]++
+				purses[currentPlayer] += 1
 				print(players[currentPlayer],
 						"now has",
 						purses[currentPlayer],
 						"Gold Coins.")
 				
 				let winner = didPlayerWin
-				currentPlayer++
+				currentPlayer += 1
                 if currentPlayer == players.count {currentPlayer = 0}
 				
 				return winner
 			} else {
-				currentPlayer++
+				currentPlayer += 1
                 if currentPlayer == players.count {currentPlayer = 0}
 				return true
 			}
@@ -143,14 +143,14 @@ open class Game {
 		} else {
 		
 			print("Answer was corrent!!!!")
-			purses[currentPlayer]++
+			purses[currentPlayer] += 1
 			print(players[currentPlayer],
 					"now has",
 					purses[currentPlayer],
 					"Gold Coins.")
 			
 			let winner = didPlayerWin
-			currentPlayer++
+			currentPlayer += 1
             if currentPlayer == players.count {currentPlayer = 0}
 			
 			return winner
@@ -162,7 +162,7 @@ open class Game {
 		print(players[currentPlayer], "was sent to the penalty box")
 		inPenaltyBox[currentPlayer] = true
 		
-		currentPlayer++
+		currentPlayer += 1
         if currentPlayer == players.count {currentPlayer = 0}
 		return true
 	}
